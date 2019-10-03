@@ -13,7 +13,7 @@ public class squareTest {
 		assertEquals(25,output);
 		App ap = new App();
 		int sum = ap.add(2,3);
-		assertEquals(6,sum);
+		assertEquals(5,sum);
 	}
 
 }
