@@ -6,19 +6,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn clean package'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-        stage("build & SonarQube analysis"){
-            agent any
+        stage("Sonar Code Analysis"){
             steps{
-                withSonarQubeEnv('sonarqube'){
-                    sh 'mvn clean package sonar:sonar'
+                withSonarQubeEnv('sonar'){
+                    sh 'mvn sonar:sonar'
                 }
             }
         }
