@@ -19,7 +19,7 @@ pipeline {
         }
         stage('nexus upload'){
             steps{
-            nexusArtifactUploader artifacts: [[artifactId: 'hexagon', classifier: '', file: 'pom.xml', type: 'jar']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon6', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '1.0-Hexagon'      
+            nexusArtifactUploader artifacts: [[artifactId: 'hexagon', classifier: '', file: '/src/main/java/com/maven/test/App.java', type: 'jar']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon6', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '1.0-Hexagon'      
             }
         }
      
