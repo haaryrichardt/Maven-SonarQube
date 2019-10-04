@@ -17,5 +17,6 @@ pipeline {
                 }
             }
         }
+        //nexusPublisher nexusInstanceId: 'wipronexus', nexusRepositoryId: 'hexagon6', packages: []
     }
 }
