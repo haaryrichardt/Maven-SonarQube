@@ -25,7 +25,7 @@ pipeline {
         }
         stage("publish"){
             steps{
-                  nexusArtifactUploader artifacts: [[artifactId: 'test', classifier: '', file: 'http://52.14.213.120:8080/job/SonarQube/15/execution/node/3/ws/target/test-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon6', nexusUrl: '18.224.155.110:8081/nexus/', nexusVersion: 'nexus2', protocol: 'http', repository: 'hexagon', version: '1.1'
+                  nexusArtifactUploader artifacts: [[artifactId: 'test', classifier: '', file: 'hexagon', type: 'jar']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon6', nexusUrl: '18.224.155.110:8081/nexus/', nexusVersion: 'nexus2', protocol: 'http', repository: 'hexagon', version: '1.1'
             }
         }
      
