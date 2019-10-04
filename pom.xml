@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.maven</groupId>
+  <groupId>hexagon.maven.artifact</groupId>
   <artifactId>hexagon</artifactId>
-  <version>1.0</version>
+  <version>1.0-Hexagon</version>
   <packaging>jar</packaging>
  <build>
   <plugins>
@@ -47,11 +47,4 @@
 </dependency>
     
   </dependencies>
-<distributionManagement>
-  <repository>
-    <id>hexagon6</id>
-    <name>hexagon</name>
-    <url>http://18.224.155.110:8081/nexus/content/repositories/hexagon6</url>
-  </repository>
-</distributionManagement>
 </project>
