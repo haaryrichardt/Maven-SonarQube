@@ -51,6 +51,7 @@
   <repository>
     <id>hexagon6</id>
     <name>hexagon</name>
+	  <type>jar</type>
     <url>http://18.224.155.110:8081/nexus/content/repositories/hexagon6</url>
   </repository>
 </distributionManagement>
