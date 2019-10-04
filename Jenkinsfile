@@ -13,9 +13,13 @@ pipeline {
             steps{
                 withSonarQubeEnv('sonar'){
                     sh 'mvn sonar:sonar'
-                    sh "nexusPublisher nexusInstanceId: 'wipronexus', nexusRepositoryId: 'hexagon6', packages: []"
                     //org.codehaus.mojo:sonar-maven-plugin::sonar can alternatively used for sonar:sonar
                 }
+            }
+        }
+        stage("publish"){
+            steps{
+                 sh "nexusPublisher nexusInstanceId: 'wipronexus', nexusRepositoryId: 'hexagon6', packages: []"
             }
         }
         //nexusPublisher nexusInstanceId: 'wipronexus', nexusRepositoryId: 'hexagon6', packages: []
