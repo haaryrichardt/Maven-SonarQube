@@ -24,7 +24,7 @@ pipeline {
         stage("Sonar Code Analysis"){
             steps{
                withSonarQubeEnv('sonar'){
-                    sh 'mvn sonar'
+                    sh 'mvn sonar:sonar -Pprofile1'
                     //org.codehaus.mojo:sonar-maven-plugin::sonar can alternatively used for sonar:sonar
                 }
             }
