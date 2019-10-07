@@ -34,9 +34,9 @@
   <url>http://maven.apache.org</url>
 <profiles>
   <profile>
-    <id>QualityProfileOne</id>
+    <id>profile1</id>
     <properties>
-      <sonar.profile>profile1</sonar.profile>
+      <sonar.profile>sonar-project.properties</sonar.profile>
     </properties>
   </profile>
 	</profiles>
