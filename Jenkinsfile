@@ -1,14 +1,4 @@
-properties = null     
 
-def loadProperties() {
-    node {
-        checkout scm
-        properties = new Properties()
-        File propertiesFile = new File("${workspace}/sonar-project.properties")
-        properties.load(propertiesFile.newDataInputStream())
-        echo "Immediate one ${properties.repo}"
-    }
-}
 pipeline {
     agent any
     tools {
